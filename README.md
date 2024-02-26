@@ -4,9 +4,10 @@ npm javascript publication of the constants found in this repo: https://github.c
 
 Example usage:
 ```js
-import { OfficerRole } from '@oc-digital/ch-constants';
+import { OfficerRole, SicDescriptions } from '@oc-digital/ch-constants';
 
-console.log(OfficerRole.director) // logs Director
+console.log(OfficerRole.director) // logs "Director"
+console.log(SicDescriptions["1440"]) // logs "Production of salt"
 ```
 
 Published as ES modules with Typescript definitions.
