@@ -1,6 +1,6 @@
 {
   "name": "@oc-digital/ch-constants",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.2",
   "module": "./build/index.mjs",
   "type": "module",
   "sideEffects": false,
@@ -16,6 +16,5 @@
     "change-case": "^5.4.3",
     "yaml": "^2.4.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
