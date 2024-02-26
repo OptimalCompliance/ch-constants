@@ -1,0 +1,21 @@
+{
+  "name": "@oc-digital/ch-constants",
+  "version": "0.0.1-beta.1",
+  "module": "./build/index.mjs",
+  "type": "module",
+  "sideEffects": false,
+  "types": "./build/index.d.ts",
+  "main": "./build/index.mjs",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "bun run build.ts"
+  },
+  "devDependencies": {
+    "change-case": "^5.4.3",
+    "yaml": "^2.4.0"
+  },
+  "dependencies": {
+  }
+}
