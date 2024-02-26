@@ -25,7 +25,7 @@ ${Object.entries(mapping).map(([key, value])=>`\t"${key}": ${typeof value};`).jo
     await writeFile(`build/${name}.d.ts`, tsContent)
 }
 
-const indexContent = Object.keys(constants).map(name=>`export { ${transform(name)} } from './${transform(name)}.mjs';`).join('\n')
+const indexContent = Object.keys(constants).map(name=>`export { ${transform(name)} } from './${transform(name)}';`).join('\n')
 await writeFile(`build/index.mjs`, indexContent)
 
 // const indexTsContent = Object.keys(constants).map(name=>`export { ${name} } from '${name}.mjs';`).join('\n')
