@@ -1,11 +1,11 @@
 {
   "name": "@oc-digital/ch-constants",
-  "version": "0.0.4-beta.0",
-  "module": "./build/index.mjs",
+  "version": "0.0.4-beta.2",
+  "module": "./build/index.js",
   "type": "module",
   "sideEffects": false,
   "types": "./build/index.d.ts",
-  "main": "./build/index.mjs",
+  "main": "./build/index.js",
   "files": [
     "build"
   ],

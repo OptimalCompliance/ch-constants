@@ -17,7 +17,7 @@ await mkdir('build', {recursive: true})
 for(const [snake_name, mapping] of Object.entries(constants)){
     const name = transform(snake_name)
     const fileContent = `export const ${name} = ${JSON.stringify(mapping, null, 2)}`
-    await writeFile(`build/${name}.mjs`, fileContent)
+    await writeFile(`build/${name}.js`, fileContent)
 
     const tsContent = Object.keys(mapping).length < 50 ? `export declare const ${name}: {
 ${Object.entries(mapping).map(([key, value])=>`\t"${key}": ${typeof value};`).join('\n')}
@@ -25,8 +25,8 @@ ${Object.entries(mapping).map(([key, value])=>`\t"${key}": ${typeof value};`).jo
     await writeFile(`build/${name}.d.ts`, tsContent)
 }
 
-const indexContent = Object.keys(constants).map(name=>`export { ${transform(name)} } from './${transform(name)}.mjs';`).join('\n')
-await writeFile(`build/index.mjs`, indexContent)
+const indexContent = Object.keys(constants).map(name=>`export { ${transform(name)} } from './${transform(name)}.js';`).join('\n')
+await writeFile(`build/index.js`, indexContent)
 
 // const indexTsContent = Object.keys(constants).map(name=>`export { ${name} } from '${name}.mjs';`).join('\n')
 await writeFile(`build/index.d.ts`, indexContent)
