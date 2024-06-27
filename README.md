@@ -2,12 +2,17 @@
 
 npm javascript publication of the constants found in this repo: https://github.com/companieshouse/api-enumerations
 
+Install https://www.npmjs.com/package/@oc-digital/ch-constants
+```
+npm install @oc-digital/ch-constants
+```
+
 Example usage:
 ```js
 import { OfficerRole, SicDescriptions } from '@oc-digital/ch-constants';
 
-console.log(OfficerRole.director) // logs "Director"
-console.log(SicDescriptions["1440"]) // logs "Production of salt"
+console.log(OfficerRole.director) // "Director"
+console.log(SicDescriptions["1440"]) // "Production of salt"
 ```
 
 Published as ES modules with Typescript definitions.
