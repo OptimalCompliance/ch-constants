@@ -1,6 +1,6 @@
 {
   "name": "@oc-digital/ch-constants",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "module": "./build/index.js",
   "type": "module",
   "sideEffects": false,
@@ -23,5 +23,8 @@
     "type": "git",
     "url": "git+https://github.com/OptimalCompliance/ch-constants.git"
   },
-  "keywords": ["companies-house", "sic-codes"]
+  "keywords": [
+    "companies-house",
+    "sic-codes"
+  ]
 }
