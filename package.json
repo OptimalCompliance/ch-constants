@@ -21,6 +21,7 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/OptimalCompliance/ch-constants.git"
-  }
+    "url": "git+https://github.com/OptimalCompliance/ch-constants.git"
+  },
+  "keywords": ["companies-house", "sic-codes"]
 }
