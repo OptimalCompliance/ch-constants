@@ -25,6 +25,17 @@ import { PscDescriptions } from '@oc-digital/ch-constants'
 console.log(PscDescriptions.ShortDescription["voting-rights-75-to-100-percent"])
 ```
 
+## Publishing a new version
+
+1. Update the version in `package.json`
+2. Create and push a git tag:
+   ```bash
+   git tag v1.2.3
+   git push origin v1.2.3
+   ```
+
+The package will be automatically published to npm via GitHub Actions.
+
 ## Package info
 Published as ES modules with Typescript definitions.
 
