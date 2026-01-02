@@ -43,4 +43,4 @@ jobs:
       # TODO remove after testing
       - name: Dry Run Publish
         if: github.event_name == 'pull_request'
-        run: npm publish --dry-run
+        run: npm publish --dry-run --tag beta
