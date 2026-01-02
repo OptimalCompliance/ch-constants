@@ -1,0 +1,29 @@
+name: Publish Package
+
+on:
+  push:
+    tags:
+      - "v*" # Triggers on version tags like v1.0.0, v2.3.1, etc.
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # REQUIRED for OIDC / Trusted Publishing
+      contents: read # Standard checkout permission
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Update npm
+        run: npm install -g npm@latest
+
+      - run: npm ci
+      - run: npm run build
+
+      # Publish using Trusted Publishing OIDC with provenance (No token needed)
+      - run: npm publish --provenance --access public
