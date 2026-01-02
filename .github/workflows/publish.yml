@@ -19,9 +19,6 @@ jobs:
           node-version: "24"
           registry-url: "https://registry.npmjs.org"
 
-      - name: Update npm
-        run: npm install -g npm@latest
-
       - name: Validate tag matches package.json version
         run: |
           TAG_VERSION="${GITHUB_REF#refs/tags/v}"
