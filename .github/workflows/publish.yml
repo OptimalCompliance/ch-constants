@@ -22,6 +22,16 @@ jobs:
       - name: Update npm
         run: npm install -g npm@latest
 
+      - name: Validate tag matches package.json version
+        run: |
+          TAG_VERSION="${GITHUB_REF#refs/tags/v}"
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+          if [ "$TAG_VERSION" != "$PACKAGE_VERSION" ]; then
+            echo "::error::Tag version ($TAG_VERSION) does not match package.json version ($PACKAGE_VERSION)"
+            exit 1
+          fi
+          echo "✓ Tag v$TAG_VERSION matches package.json version"
+
       - run: npm ci
       - run: npm run build
 
