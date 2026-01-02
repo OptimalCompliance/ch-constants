@@ -9,7 +9,7 @@ const transform = pascalCase
 
 const files = ['constants.yml', 'psc_descriptions.yml']
 
-await rm('build', {recursive: true}) // clear previous build
+await rm('build', {recursive: true, force: true}) // clear previous build
 await mkdir('build', {recursive: true})
 
 const subdirs = []
