@@ -1,3 +1,5 @@
 build
 node_modules
+
+# package-lock is created by npm during publishing operations, but isn't needed since we use Bun which has its own lock file
 package-lock.json
