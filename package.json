@@ -1,6 +1,6 @@
 {
 	"name": "@oc-digital/ch-constants",
-	"version": "1.1.1-beta.1",
+	"version": "1.1.1",
 	"module": "./build/index.js",
 	"type": "module",
 	"sideEffects": false,
